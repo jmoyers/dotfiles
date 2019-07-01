@@ -1,7 +1,6 @@
-source ~/acd_func.sh
-export DOCKER_HOST=localhost:2375
+source ~/dotfiles/acd_func.sh
 PATH=~/bin:/home/jmoyers/.local/bin:/home/jmoyers/node/node-v10.16.0-linux-x64/bin:$PATH
-. ~/z/z.sh
+. ~/dotfiles/z/z.sh
 eval $(dircolors -b $HOME/.dircolors)
 j=$'\[\e[01;38;5;52m\]j'
 m=$'\[\e[01;38;5;124m\]m'
