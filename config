@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ln -s ../vim-config ../.vim
-ln -s ../vim-config/vimrc ../.vimrc
-ln -s .bashrc ../.bashrc
-ln -s .tmux.conf ../.tmux.conf
+ln -sf $HOME/vim-config $HOME/.vim
+ln -sf $HOME/vim-config/vimrc $HOME/.vimrc
+ln -sf $HOME/dotfiles/.bashrc $HOME/.bashrc
+ln -sf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
