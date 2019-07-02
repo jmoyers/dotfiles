@@ -1,7 +1,7 @@
 source ~/dotfiles/acd_func.sh
-PATH=~/bin:/home/jmoyers/.local/bin:/home/jmoyers/node/node-v10.16.0-linux-x64/bin:$PATH
+PATH=~/bin:/home/jmoyers/.local/bin:$PATH
 . ~/dotfiles/z/z.sh
-eval $(dircolors -b $HOME/.dircolors)
+eval $(dircolors -b $HOME/dotfiles/.dircolors)
 j=$'\[\e[01;38;5;52m\]j'
 m=$'\[\e[01;38;5;124m\]m'
 o=$'\[\e[01;38;5;196m\]o'
@@ -34,10 +34,6 @@ alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
