@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+ln -s ../vim-config ../.vim
+ln -s ../vim-config/vimrc ../.vimrc
+ln -s .bashrc ../.bashrc
+ln -s .tmux.conf ../.tmux.conf
