@@ -1,6 +1,18 @@
 #!/usr/bin/env bash
 
-ln -sf $HOME/vim-config $HOME/.vim
-ln -sf $HOME/vim-config/vimrc $HOME/.vimrc
+# Please don't use this if you have an existing config you want to keep
+# Don't be a dumb dumb. This is for bootstrapping an empty home directory
+
+ln -sf $HOME/dotfiles/vim $HOME/.vim
+ln -sf $HOME/dotfiles/vim/vimrc $HOME/.vimrc
 ln -sf $HOME/dotfiles/.bashrc $HOME/.bashrc
+ln -sf $HOME/dotfiles/.bashrc $HOME/.bash_profile
 ln -sf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
+
+mkdir -p $HOME/.config
+mkdir -p $HOME/.config
+rm -rf $HOME/.config/kitty
+rm -rf $HOME/.config/i3
+
+ln -s $HOME/dotfiles/i3 $HOME/.config/i3
+ln -s $HOME/dotfiles/kitty $HOME/.config/kitty
