@@ -2,7 +2,7 @@
 
 [Settings]
 # gtk-application-prefer-dark-theme = false
-# gtk-theme-name = Zukitwo
+gtk-theme-name = Arc-Dark
 # gtk-fallback-icon-theme = gnome
 # gtk-icon-theme-name = Faenza-Dark
 gtk-font-name = Fira Code Regular 10

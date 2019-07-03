@@ -3,11 +3,11 @@
 gtk-can-change-accels = 1
 
 # gtk-icon-theme-name = "Faenza-Dark"
-# gtk-theme-name = "Zukitwo"
+gtk-theme-name = "Arc-Dark"
 
 style "user-font"
 {
-        font_name="Fira Code Regular 10"
+  font_name="Fira Code Regular 10"
 }
 
 widget_class "*" style "user-font"
