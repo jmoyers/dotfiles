@@ -16,6 +16,7 @@ rm -rf $HOME/.config/i3
 
 ln -s $HOME/dotfiles/i3 $HOME/.config/i3
 ln -s $HOME/dotfiles/kitty $HOME/.config/kitty
+ln -sf $HOME/dotfiles/compton/compton.conf $HOME/.config/compton.conf
 
 mkdir -p $HOME/.local/share/fonts
 
