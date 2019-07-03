@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# bail out of the loop if we get an interrupt
+trap "exit" INT
+
+for p in $(cat packages.txt); do
+  pacman -S $p
+done
