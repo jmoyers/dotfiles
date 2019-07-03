@@ -2,20 +2,23 @@ source ~/dotfiles/acd_func.sh
 PATH=~/bin:/home/jmoyers/.local/bin:$PATH
 . ~/dotfiles/z/z.sh
 eval $(dircolors -b $HOME/dotfiles/.dircolors)
-j=$'\[\e[01;38;5;52m\]j'
-m=$'\[\e[01;38;5;124m\]m'
-o=$'\[\e[01;38;5;196m\]o'
-y=$'\[\e[01;38;5;202m\]y'
-e=$'\[\e[01;38;5;208m\]e'
-rr=$'\[\e[01;38;5;214m\]r'
-s=$'\[\e[01;38;5;220m\]s'
+declare -a ps1_colors=($'\[\e[01;38;5;52m\]' $'\[\e[01;38;5;124m\]' \
+  $'\[\e[01;38;5;196m\]' $'\[\e[01;38;5;202m\]' $'\[\e[01;38;5;208m\]' \
+  $'\[\e[01;38;5;214m\]' $'\[\e[01;38;5;220m\]')
+
 end_color=$'\[\e[0m\]'
-ps1_username="$j$m$o$y$e$rr$s"
+
+ps1_username=""
+
+for (( i=0; i<${#USER}; i++ )); do
+  ps1_username=$ps1_username${ps1_colors[i]}${USER:$i:1}
+done
+
 ps1_host=$'\[\e[0;36;40m\]'$(hostname)
 # by the way, 
 ps1_location="\$(basename \$(pwd))"
 #PS1="$ps1_username @ $ps1_host"
-PS1="$ps1_username @ $ps1_host $ps1_location$end_color > "
+PS1="$ps1_username 🌱 $ps1_host $ps1_location$end_color > "
 
 # make it so ctrl-s doesn't freeze fucking bash
 stty -ixon
