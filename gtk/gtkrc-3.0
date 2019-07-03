@@ -1,0 +1,8 @@
+# ~/.config/gtk-3.0/settings.ini
+
+[Settings]
+# gtk-application-prefer-dark-theme = false
+# gtk-theme-name = Zukitwo
+# gtk-fallback-icon-theme = gnome
+# gtk-icon-theme-name = Faenza-Dark
+gtk-font-name = Fira Code Regular 10

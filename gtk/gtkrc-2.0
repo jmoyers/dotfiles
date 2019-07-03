@@ -1,0 +1,14 @@
+# ~/.gtkrc-2.0
+
+gtk-can-change-accels = 1
+
+# gtk-icon-theme-name = "Faenza-Dark"
+# gtk-theme-name = "Zukitwo"
+
+style "user-font"
+{
+        font_name="Fira Code Regular 10"
+}
+
+widget_class "*" style "user-font"
+gtk-font-name = "Fira Code Regular 10"
