@@ -1,6 +1,6 @@
 set nocompatible      " be iMproved, required
 set encoding=utf-8
-set clipboard=unnamed
+set clipboard=unnamedplus " linux ctrl-c/v
 
 " Allows you to :e file automplete in subdirectories
 set path+=**
