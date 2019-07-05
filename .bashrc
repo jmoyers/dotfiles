@@ -8,7 +8,7 @@ source ~/dotfiles/acd_func.sh
 # fuzzy cd, z {fuzzy dest}
 source ~/dotfiles/z/z.sh
 
-PATH=~/bin:/home/jmoyers/.local/bin:$PATH
+PATH=~/bin:/home/jmoyers/.local/bin:/var/lib/snapd/snap/bin:$PATH
 
 eval $(dircolors -b $HOME/dotfiles/.dircolors)
 
