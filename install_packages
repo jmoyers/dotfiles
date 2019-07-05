@@ -4,5 +4,5 @@
 trap "exit" INT
 
 for p in $(cat packages.txt); do
-  pacman -S $p
+  pacman --noconfirm --needed -S $p
 done
