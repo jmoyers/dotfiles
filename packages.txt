@@ -1,3 +1,4 @@
+ansible
 arandr
 autoconf
 automake
@@ -40,6 +41,7 @@ inetutils
 iproute2
 iputils
 jfsutils
+keychain
 kitty
 kodi
 less
@@ -75,8 +77,8 @@ ranger
 reiserfsprogs
 rofi
 rsync
-rxvt-unicode
 s-nail
+scrot
 sed
 shadow
 snapd
@@ -84,6 +86,7 @@ sudo
 sysfsutils
 systemd-sysvcompat
 tar
+terraform
 texinfo
 tmux
 tree
