@@ -1,6 +1,8 @@
 # default files and directories to be for this user only
 umask u=rwx,g=,o=
 
+export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/snapd/desktop/applications/
+
 # this is an extension to cd that has history, cd --
 source ~/dotfiles/acd_func.sh
 
