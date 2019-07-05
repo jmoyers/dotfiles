@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
 pacman -Qqe > $HOME/dotfiles/packages.txt
+snap list > $HOME/
