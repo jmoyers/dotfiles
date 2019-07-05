@@ -172,3 +172,15 @@ for_window [class=".*"] border pixel 2
 gaps inner 10
 
 bindsym $mod+x move workspace to output right
+
+workspace 1 output DP-0
+workspace 2 output DP-0
+workspace 3 output DP-0
+workspace 4 output DVI-D-0
+workspace 5 output DVI-D-0
+workspace 6 output DVI-D-0
+
+assign [class="kitty"] $ws1
+assign [class="Firefox"] $ws4
+assign [class="google-chrome"] $ws4
+assign [class="Spotify"] $ws5
