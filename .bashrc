@@ -4,6 +4,8 @@ umask u=rwx,g=,o=
 # this is an extension to cd that has history, cd --
 source ~/dotfiles/acd_func.sh
 
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
 
 # fuzzy cd, z {fuzzy dest}
 source ~/dotfiles/z/z.sh
