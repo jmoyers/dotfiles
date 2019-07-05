@@ -163,11 +163,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id compton
-exec feh --bg-scale ~/dotfiles/backgrounds/rain.jpg
-exec_always --no-startup-id $HOME/dotfiles/polybar/start
-exec_always --no-startup-id $HOME/dotfiles/screenlayout
-
 for_window [class=".*"] border pixel 2
 gaps inner 10
 
@@ -180,7 +175,16 @@ workspace 4 output DVI-D-0
 workspace 5 output DVI-D-0
 workspace 6 output DVI-D-0
 
-assign [class="kitty"] $ws1
-assign [class="Firefox"] $ws4
-assign [class="google-chrome"] $ws4
-assign [class="Spotify"] $ws5
+for_window [class="kitty"] move to workspace $ws1
+for_window [class="Firefox"] move to workspace $ws4
+for_window [class="Google-chrome"] move to workspace $ws4
+for_window [class="Spotify"] move to workspace $ws5
+
+exec_always --no-startup-id compton
+exec_always --no-startup-id feh --bg-scale ~/dotfiles/backgrounds/rain.jpg
+exec_always --no-startup-id $HOME/dotfiles/polybar/start
+exec_always --no-startup-id $HOME/dotfiles/screenlayout
+exec spotify
+exec firefox
+exec kitty
+exec kitty
