@@ -8,6 +8,7 @@ source ~/dotfiles/acd_func.sh
 
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+alias ssh='kitty +kitten ssh'
 
 # fuzzy cd, z {fuzzy dest}
 source ~/dotfiles/z/z.sh
@@ -32,8 +33,9 @@ done
 ps1_host=$'\[\e[0;36;40m\]'$(hostname)
 # by the way, 
 ps1_location="\$(basename \$(pwd))"
-#PS1="$ps1_username @ $ps1_host"
+#PS1="$ps1_username $ps1_host"
 PS1="$ps1_username 🌱 $ps1_host $ps1_location$end_color > "
+#🌱
 
 # make it so ctrl-s doesn't freeze fucking bash
 stty -ixon
