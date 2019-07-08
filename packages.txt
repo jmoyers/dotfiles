@@ -3,6 +3,7 @@ arandr
 autoconf
 automake
 bash
+bind-tools
 binutils
 bison
 bzip2
@@ -63,6 +64,8 @@ nautilus
 neofetch
 netctl
 noto-fonts-emoji
+ntfs-3g
+ntp
 nvidia
 openssh
 os-prober
