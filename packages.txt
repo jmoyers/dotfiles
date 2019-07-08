@@ -63,7 +63,9 @@ nano
 nautilus
 neofetch
 netctl
+nodejs
 noto-fonts-emoji
+npm
 ntfs-3g
 ntp
 nvidia
@@ -143,4 +145,5 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xsel
+yarn
 zip
