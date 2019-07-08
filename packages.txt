@@ -14,6 +14,7 @@ device-mapper
 dhcpcd
 diffutils
 docker
+docker-compose
 e2fsprogs
 efibootmgr
 fakeroot
