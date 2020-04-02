@@ -40,6 +40,9 @@ colorscheme onehalfdark
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+" https://superuser.com/questions/457911/in-vim-background-color-changes-on-scrolling/588243
+set t_ut=
+
 let g:prettier#autoformat = 0
 au BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml Prettier
 au BufRead,BufNewFile *.js setlocal syntax=javascript.jsx

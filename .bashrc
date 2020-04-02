@@ -2,6 +2,8 @@
 umask u=rwx,g=,o=
 
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/snapd/desktop/applications/
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # this is an extension to cd that has history, cd --
 source ~/dotfiles/acd_func.sh
