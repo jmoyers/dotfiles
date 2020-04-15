@@ -11,6 +11,7 @@ source ~/dotfiles/acd_func.sh
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias ssh='kitty +kitten ssh'
+alias next='babel-node --presets @babel/preset-env'
 
 # fuzzy cd, z {fuzzy dest}
 source ~/dotfiles/z/z.sh
