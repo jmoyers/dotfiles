@@ -4,14 +4,12 @@ umask u=rwx,g=,o=
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/snapd/desktop/applications/
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
 
-# this is an extension to cd that has history, cd --
-source ~/dotfiles/acd_func.sh
-
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-alias ssh='kitty +kitten ssh'
+#alias ssh='kitty +kitten ssh'
 alias next='babel-node --presets @babel/preset-env'
+alias py='python3'
 
 # fuzzy cd, z {fuzzy dest}
 source ~/dotfiles/z/z.sh
@@ -73,3 +71,5 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.cargo/bin:$PATH"
