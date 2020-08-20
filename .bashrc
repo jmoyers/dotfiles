@@ -7,16 +7,21 @@ export EDITOR="$VISUAL"
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 
-#alias ssh='kitty +kitten ssh'
-alias next='babel-node --presets @babel/preset-env'
-alias py='python3'
-
 # fuzzy cd, z {fuzzy dest}
 source ~/dotfiles/z/z.sh
 
 PATH=~/bin:/home/jmoyers/.local/bin:/var/lib/snapd/snap/bin:$PATH
 
-eval $(dircolors -b $HOME/dotfiles/.dircolors)
+if [[ "$OSTYPE" != "darwin"* ]]; then 
+  alias ls='ls --color=auto'
+  alias ll='ls -alF'
+  alias la='ls -A'
+  alias l='ls -CF'
+  eval "$(dircolors -b $HOME/dotfiles/.dircolors)"
+else
+  alias ll='ls -al'
+  export CLICOLOR=1
+fi
 
 # ps1 colors for username
 declare -a ps1_colors=($'\[\e[01;38;5;52m\]' $'\[\e[01;38;5;124m\]' \
@@ -31,7 +36,7 @@ for (( i=0; i<${#USER}; i++ )); do
   ps1_username=$ps1_username${ps1_colors[i]}${USER:$i:1}
 done
 
-ps1_host=$'\[\e[0;36;40m\]'$(hostname)
+ps1_host="$end_color$(hostname)"
 # by the way, 
 ps1_location="\$(basename \$(pwd))"
 #PS1="$ps1_username $ps1_host"
@@ -50,11 +55,6 @@ shopt -s histappend                      # append to history, don't overwrite it
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
-alias ls='ls --color=auto'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
