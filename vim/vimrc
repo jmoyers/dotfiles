@@ -19,7 +19,6 @@ if has("unix")
   endif
 endif
 
-
 " windows/wsl yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path
 if executable(s:clip)
@@ -58,6 +57,10 @@ Plug 'tpope/vim-dispatch'
 call plug#end()
 
 colorscheme dracula
+
+" terminals that don't support italics (a lot of them) get tripped up
+" and have an ugly background color instead of italics
+let g:dracula_italic = 0
 
 " https://superuser.com/questions/457911/in-vim-background-color-changes-on-scrolling/588243
 " set t_ut=
@@ -101,7 +104,7 @@ endif
 set number
 
 " Set the status line to something nifty
-set stl=%f\ Line:%l/%L\ (%p%%)\ Col:%v\ Buf:#%n\ 0x%B
+" set stl=%f\ Line:%l/%L\ (%p%%)\ Col:%v\ Buf:#%n\ 0x%B
 
 " always show a status line
-set laststatus=2
+" set laststatus=2
