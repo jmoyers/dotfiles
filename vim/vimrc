@@ -62,17 +62,6 @@ colorscheme dracula
 " and have an ugly background color instead of italics
 let g:dracula_italic = 0
 
-" https://superuser.com/questions/457911/in-vim-background-color-changes-on-scrolling/588243
-" set t_ut=
-
-let g:prettier#autoformat = 0
-au BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml Prettier
-au BufRead,BufNewFile *.js setlocal syntax=javascript.jsx
-au BufRead,BufNewFile *.yaml,*.yml set filetype=yaml.ansible
-
-" automatically wrap in markdown
-au BufRead,BufNewFile *.md setlocal textwidth=80
-
 " new version of vim is dumb and wont delete over line breaks
 set backspace=2
 
@@ -103,8 +92,5 @@ endif
 " Add line numbers
 set number
 
-" Set the status line to something nifty
-" set stl=%f\ Line:%l/%L\ (%p%%)\ Col:%v\ Buf:#%n\ 0x%B
-
-" always show a status line
-" set laststatus=2
+" i hate comment continuation with a passion
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro

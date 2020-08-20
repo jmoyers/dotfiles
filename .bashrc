@@ -23,6 +23,8 @@ else
   export CLICOLOR=1
 fi
 
+alias voltron="python3 -m voltron"
+
 # ps1 colors for username
 declare -a ps1_colors=($'\[\e[01;38;5;52m\]' $'\[\e[01;38;5;124m\]' \
   $'\[\e[01;38;5;196m\]' $'\[\e[01;38;5;202m\]' $'\[\e[01;38;5;208m\]' \
