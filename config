@@ -14,9 +14,9 @@ mkdir -p $HOME/.config
 rm -rf $HOME/.config/kitty
 rm -rf $HOME/.config/i3
 
-ln -s $HOME/dotfiles/i3 $HOME/.config/i3
-ln -s $HOME/dotfiles/kitty $HOME/.config/kitty
-ln -sf $HOME/dotfiles/compton/compton.conf $HOME/.config/compton.conf
+ln -s $HOME/dotfiles/linux-specific/i3 $HOME/.config/i3
+ln -s $HOME/dotfiles/linux-specific/kitty $HOME/.config/kitty
+ln -sf $HOME/dotfiles/linux-specific/compton/compton.conf $HOME/.config/compton.conf
 
 mkdir -p $HOME/.local/share/fonts
 
@@ -27,11 +27,11 @@ done
 
 mkdir -p $HOME/.config/gtk-3.0
 
-ln -sf $HOME/dotfiles/gtk/gtkrc-2.0 $HOME/.gtkrc-2.0
-ln -sf $HOME/dotfiles/gtk/gtkrc-3.0 $HOME/.config/gtk-3.0/settings.ini
+ln -sf $HOME/dotfiles/linux-specific/gtk/gtkrc-2.0 $HOME/.gtkrc-2.0
+ln -sf $HOME/dotfiles/linux-specific/gtk/gtkrc-3.0 $HOME/.config/gtk-3.0/settings.ini
 
 mkdir -p $HOME/.config/polybar
-ln -sf $HOME/dotfiles/polybar/config $HOME/.config/polybar/config
+ln -sf $HOME/dotfiles/linux-specific/polybar/config $HOME/.config/polybar/config
 
-ln -sf $HOME/dotfiles/.xinitrc $HOME/.xinitrc
-ln -sf $HOME/dotfiles/.Xresources $HOME/.Xresources
+ln -sf $HOME/dotfiles/linux-specific/.xinitrc $HOME/.xinitrc
+ln -sf $HOME/dotfiles/linux-specific/.Xresources $HOME/.Xresources
