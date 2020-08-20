@@ -4,8 +4,21 @@ set nocompatible
 " you want emojis right?
 set encoding=utf-8
 
-" yank to clipboard on some platforms
+" yank to clipboard on linux
 set clipboard=unnamedplus
+
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    " vodoo for true color, along with .tmux.conf settings
+    " https://tomlankhorst.nl/iterm-tmux-vim-true-color/
+    set termguicolors
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set clipboard=unnamed
+  endif
+endif
+
 
 " windows/wsl yank support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path
@@ -45,10 +58,6 @@ Plug 'tpope/vim-dispatch'
 call plug#end()
 
 colorscheme dracula
-
-" vodoo for true color, along with .tmux.conf settings
-" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " https://superuser.com/questions/457911/in-vim-background-color-changes-on-scrolling/588243
 " set t_ut=
