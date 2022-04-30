@@ -5,33 +5,6 @@
 
 ln -sf $HOME/dotfiles/vim $HOME/.vim
 ln -sf $HOME/dotfiles/vim/vimrc $HOME/.vimrc
-ln -sf $HOME/dotfiles/.bashrc $HOME/.bashrc
-ln -sf $HOME/dotfiles/.bashrc $HOME/.bash_profile
+ln -sf $HOME/dotfiles/.bashrc $HOME/.zshrc
+ln -sf $HOME/dotfiles/.bashrc $HOME/.zprofile
 ln -sf $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
-
-mkdir -p $HOME/.config
-mkdir -p $HOME/.config
-rm -rf $HOME/.config/kitty
-rm -rf $HOME/.config/i3
-
-ln -s $HOME/dotfiles/linux-specific/i3 $HOME/.config/i3
-ln -s $HOME/dotfiles/linux-specific/kitty $HOME/.config/kitty
-ln -sf $HOME/dotfiles/linux-specific/compton/compton.conf $HOME/.config/compton.conf
-
-mkdir -p $HOME/.local/share/fonts
-
-for f in $(find "$HOME/dotfiles/fonts/" -name "*.ttf")
-do
-  ln -sf $f $HOME/.local/share/fonts/$(basename $f)
-done
-
-mkdir -p $HOME/.config/gtk-3.0
-
-ln -sf $HOME/dotfiles/linux-specific/gtk/gtkrc-2.0 $HOME/.gtkrc-2.0
-ln -sf $HOME/dotfiles/linux-specific/gtk/gtkrc-3.0 $HOME/.config/gtk-3.0/settings.ini
-
-mkdir -p $HOME/.config/polybar
-ln -sf $HOME/dotfiles/linux-specific/polybar/config $HOME/.config/polybar/config
-
-ln -sf $HOME/dotfiles/linux-specific/.xinitrc $HOME/.xinitrc
-ln -sf $HOME/dotfiles/linux-specific/.Xresources $HOME/.Xresources

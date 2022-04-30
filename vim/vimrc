@@ -43,14 +43,12 @@ filetype plugin indent on
 
 call plug#begin()
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-Plug 'othree/yajs'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
-Plug 'hashivim/vim-terraform'
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
-Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
-Plug 'mustache/vim-mustache-handlebars'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rhysd/vim-clang-format'
 Plug 'tpope/vim-dispatch'
